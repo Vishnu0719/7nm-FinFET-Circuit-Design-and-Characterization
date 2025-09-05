@@ -347,6 +347,11 @@ A bandgap reference circuit provides a stable voltage that is largely independen
 
 In this work, the bandgap circuit has been implemented using the ASAP 7 nm FinFET PDK, leveraging the advantages of FinFET devices to achieve a compact and high-performance design suitable for modern VLSI applications.
 
+<picture>
+<img alt = "Bandgap_Reference_Circuit" src="reference_circuit.png">
+</picture>
+
+
 ```
 ** sch_path: /home/vsduser/Desktop/asap_7nm_Xschem/circuit.sch
 **.subckt circuit
