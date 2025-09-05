@@ -236,6 +236,9 @@ The switching threshold voltage of an inverter is the input voltage at which the
 
 SPICE Command:
 ``` meas dc v_th when nfet_out=nfet_in ```
+<picture>
+<img alt = "Vtc" src="vtc_curve.png">
+</picture>
 
 ### Drain Current (Id)
 Drain current (Id) is the current flowing from the source to the drain of a FinFET when a gate voltage is applied and a voltage is present between the source and drain.
@@ -252,6 +255,10 @@ let id = v2#branch
 plot id
 
 ```
+<picture>
+<img alt = "Id" src="Id_curve.png">
+</picture>
+
 ### Power Consumption (P)
 
 Power consumption is the integral of the product of supply voltage (Vdd) and transient current over a time period.
@@ -289,6 +296,10 @@ let gain_av = abs(deriv(nfet_out))
 plot gain_av
 
 ```
+<picture>
+<img alt = "gain" src="gain_av">
+</picture>
+
 ### Noise Margin (NM)
 The noise margin of an inverter measures its tolerance to input noise while still correctly recognizing logic levels. It is defined using four voltage parameters:
 
@@ -324,6 +335,9 @@ SPICE Command:
     meas dc gm_max MAX gm
     plot gm
 ```
+<picture>
+<img alt = "gm" src="gm.png">
+</picture>
 
 ### Frequency
 It is calculated as the inverse of total propagation delay.
@@ -581,7 +595,7 @@ Transient analysis to observe startup behavior
 <img alt = "Transient_Analysis" src="workshop_transient_analysis.png">
 </picture>
 
-## Characterization Table
+### Characterization Table
 
 |VDD (V)   | Temp   | Vref  | Line Reg (mV/V)  | Startup Time (ns)  |
 |----------|--------|-------|------------------|--------------------|
@@ -591,10 +605,10 @@ Transient analysis to observe startup behavior
 | 1        |  -40   |  1.080| 505              | 28                 |
 | 1        |  125   | 1.065 | 500              |  34                |
 
-### Conclusion
+## Conclusion
 In this workshop, we characterized a 7 nm FinFET using the ASAP PDK from ASU, evaluating parameters such as switching threshold, power consumption, and propagation delay. Additionally, we designed a bandgap reference circuit using the same ASAP 7 nm PDK and analyzed its key parameters, including VCTAT, VREF, startup time, and line regulation voltage.
 
-### Acknowledgements
+## Acknowledgements
 - Kunal Ghosh (Co-Founder of VSD) [linkedin](https://www.linkedin.com/in/kunal-ghosh-vlsisystemdesign-com-28084836/)
 - Soundarya Madhuri Royyuru [github](https://github.com/RSMadhuri66)
 
