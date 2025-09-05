@@ -254,6 +254,7 @@ The switching threshold voltage of an inverter is the input voltage at which the
 
 SPICE Command:
 ``` meas dc v_th when nfet_out=nfet_in ```
+
 <picture>
 <img alt = "Vtc" src="vtc_curve.png">
 </picture>
