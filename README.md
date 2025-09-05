@@ -351,6 +351,12 @@ In this work, the bandgap circuit has been implemented using the ASAP 7 nm Fin
 <img alt = "Bandgap_Reference_Circuit" src="reference_circuit.png">
 </picture>
 
+Implemented Schematic with Uniq Resistor with a value of 477 ohms
+<picture>
+<img alt = "Implemented_Circuit" src="schematic.png">
+</picture>
+
+spice netlist of implemented schematic:
 
 ```
 ** sch_path: /home/vsduser/Desktop/asap_7nm_Xschem/circuit.sch
