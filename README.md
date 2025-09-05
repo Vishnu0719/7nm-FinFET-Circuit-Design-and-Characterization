@@ -367,6 +367,17 @@ V1 VDD GND 0.8
 Runiq net15 net8 477 ac=1k m=1
 **** begin user architecture code
 
+dc temp -45 150 5
+.control
+run
+plot v(Vref) v(Vctat)
+plot v(Vref)-v(Vctat)
+plot v(Vctat)
+let temp_coeff = deriv(v(Vref))/1.24
+plot temp_coeff
+plot net9/30k Vref/33.33k Vctat/50k
+plot abs(v1#branch)
+.endc
 
 
 .tran 10u 2m uic
