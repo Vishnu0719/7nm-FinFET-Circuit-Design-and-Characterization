@@ -581,6 +581,8 @@ Transient analysis to observe startup behavior
 <img alt = "Transient_Analysis" src="workshop_transient_analysis.png">
 </picture>
 
+###Characterization Table
+
 |VDD (V)   | Temp   | Vref  | Line Reg (mV/V)  | Startup Time (ns)  |
 |----------|--------|-------|------------------|--------------------|
 |0.8       |27      |0.68   |502               |35                  |
