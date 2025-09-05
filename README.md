@@ -581,7 +581,7 @@ Transient analysis to observe startup behavior
 <img alt = "Transient_Analysis" src="workshop_transient_analysis.png">
 </picture>
 
-### Characterization Table
+## Characterization Table
 
 |VDD (V)   | Temp   | Vref  | Line Reg (mV/V)  | Startup Time (ns)  |
 |----------|--------|-------|------------------|--------------------|
@@ -591,7 +591,12 @@ Transient analysis to observe startup behavior
 | 1        |  -40   |  1.080| 505              | 28                 |
 | 1        |  125   | 1.065 | 500              |  34                |
 
+### Conclusion
+In this workshop, we characterized a 7 nm FinFET using the ASAP PDK from ASU, evaluating parameters such as switching threshold, power consumption, and propagation delay. Additionally, we designed a bandgap reference circuit using the same ASAP 7 nm PDK and analyzed its key parameters, including VCTAT, VREF, startup time, and line regulation voltage.
 
+### Acknowledgements
+- Kunal Ghosh (Co-Founder of VSD) [linkedin](https://www.linkedin.com/in/kunal-ghosh-vlsisystemdesign-com-28084836/)
+- Soundarya Madhuri Royyuru [github](https://github.com/RSMadhuri66)
 
 
 
