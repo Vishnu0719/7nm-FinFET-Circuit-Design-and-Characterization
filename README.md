@@ -441,13 +441,12 @@ plot abs(v1#branch)
 .endc
 
 
-.tran 10u 2m uic
-.temp -40
+.tran 0.01n 100n
+.temp 125
 .control
-pre_osdi /home/vsduser/Desktop/asap_7nm_Xschem/bsimcmg.osdi
 run
-meas trans vref_final FIND v(vref) AT=1.99m
-meas tran t_99 WHEN v(vref)=0.99*vref_final FALL=1
+meas trans vref_final FIND v(Vref) AT=90n
+meas tran t_99 WHEN v(Vref)=0.99*vref_final RISE=1
 print t_99
 plot v(Vctat)
 plot v(Vref)
