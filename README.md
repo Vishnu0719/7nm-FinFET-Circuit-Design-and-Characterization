@@ -342,6 +342,11 @@ SPICE Command:
 
 ```
 ## 7nm FinFET Bandgap Reference Design and Simulation using Xschem
+
+A bandgap reference circuit provides a stable voltage that is largely independent of temperature and supply variations. It achieves this by combining a CTAT voltage (which decreases with temperature) and a PTAT voltage (which increases with temperature), so that their temperature effects cancel out, resulting in a nearly constant reference voltage around 1.2 V. 
+
+In this work, the bandgap circuit has been implemented using the ASAP 7 nm FinFET PDK, leveraging the advantages of FinFET devices to achieve a compact and high-performance design suitable for modern VLSI applications.
+
 ```
 ** sch_path: /home/vsduser/Desktop/asap_7nm_Xschem/circuit.sch
 **.subckt circuit
