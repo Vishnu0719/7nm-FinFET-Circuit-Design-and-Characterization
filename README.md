@@ -565,6 +565,29 @@ pre_osdi /home/vsduser/Desktop/asap_7nm_Xschem/bsimcmg.osdi
 **** end user architecture code
 .end
 ```
+Plotted graphs of Vref, temperature coefficient, and Vctat.
+<picture>
+<img alt = "Temperature_Coefficient" src="workshop_temp_coefficient.png">
+</picture>
+<picture>
+<img alt = "Vref" src="workshop_Vref.png">
+</picture>
+<picture>
+<img alt = "Vctat" src="workshop_vctat.png">
+</picture>
+
+Transient analysis to observe startup behavior
+<picture>
+<img alt = "Transient_Analysis" src="workshop_transient_analysis.png">
+</picture>
+
+|VDD (V)   | Temp   | Vref  | Line Reg (mV/V)  | Startup Time (ns)  |
+|0.8|27|0.68|502|35|
+|0.9|  27 | 0.87  | 502  | 32  |
+| 1 |  27 |  1.072 |  502 |  30 |
+| 1  |  -40 |   1.080| 505  | 28  |
+| 1  |  125 | 1.065  | 500  |  34 |
+
 
 
 
