@@ -1,6 +1,24 @@
 # 7nm-FinFET-Circuit-Design-and-Characterization
 
+## Introduction
+
+As CMOS technology scaling continues, traditional planar MOSFETs encounter significant challenges, including short-channel effects, threshold voltage variability, increased leakage currents, and reduced gate control over the channel. These limitations degrade transistor performance, increase power consumption, and hinder further scaling. To address these issues, the semiconductor industry transitioned to FinFET (Fin Field-Effect Transistor) technology, which offers improved electrostatic control and scalability for advanced nodes.
+
+FinFETs are 3D multi-gate transistors where the channel is formed as a thin vertical “fin” and the gate wraps around it on multiple sides. This structure enhances gate-to-channel control, suppresses leakage currents, and allows higher drive currents compared to planar devices. FinFETs also offer reduced short-channel effects, improved subthreshold slope, and better performance at low supply voltages, making them highly suitable for high-speed, low-power, and dense integrated circuits. With these advantages, FinFETs have become the preferred technology for nodes like 7 nm and below, enabling continued transistor scaling in modern VLSI design.
+
+The figure below depicts the planar MOSFET and FinFET transistor structures.
+
+<picture> 
+<img alt="NFET Id" src="finfet.png"> 
+<picture>
+
 ## Characterization of a 7nm FinFET Inverter
+A 7 nm NFET has been characterized using the ASAP PDK, and the drain current (Id) versus Vds curve is shown below.
+
+<picture> <img alt="NFET Id" src="nfet_Id.png"> <picture>
+
+Similarly, the inverter has been characterized, with its SPICE deck and extracted parameters presented below.
+
 Modified SPICE Deck
 ```
 
@@ -297,7 +315,7 @@ plot gain_av
 
 ```
 <picture>
-<img alt = "gain" src="gain_av">
+<img alt = "gain" src="gain_av.png">
 </picture>
 
 ### Noise Margin (NM)
@@ -355,6 +373,17 @@ SPICE Command:
     print f      
 
 ```
+
+### Characterization Table
+| W/L (PMOS) | W/L (NMOS) | Vth (V)  | Id (A)       | P (W)      | Tpd (ps) | Av   | f (Hz)      |
+|------------|------------|----------|--------------|------------|----------|------|-------------|
+| 2          | 2          | 0.344    | 0.000012     | 2.96e-5    | 2.53e-11 | 6.42 | 2.24e+10    |
+| 1.72       | 2          | 0.344    | 0.0000105    | 2.96e-5    | 2.53e-11 | 6.42 | 2.24e+10    |
+| 2.29       | 2.14       | 0.349    | 0.000013     | 3.06e-5    | 2.53e-11 | 6.42 | 2.24e+10    |
+| 2.43       | 2.14       | 0.349    | 0.0000135    | 3.06e-5    | 2.53e-11 | 6.42 | 2.24e+10    |
+| 2.43       | 1.72       | 0.334    | 0.000011     | 2.74e-5    | 2.51e-11 | 6.44 | 2.25e+10    |
+
+
 ## 7nm FinFET Bandgap Reference Design and Simulation using Xschem
 
 A bandgap reference circuit provides a stable voltage that is largely independent of temperature and supply variations. It achieves this by combining a CTAT voltage (which decreases with temperature) and a PTAT voltage (which increases with temperature), so that their temperature effects cancel out, resulting in a nearly constant reference voltage around 1.2 V. 
